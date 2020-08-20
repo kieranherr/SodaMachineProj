@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SodaMachine
 {
@@ -10,6 +7,19 @@ namespace SodaMachine
     {
         static void Main(string[] args)
         {
+            SodaMachine test = new SodaMachine();
+            //Coin test
+            test.register.ForEach(Console.WriteLine);
+            Console.ReadLine();
+            Console.WriteLine(test.register.ElementAt(2).Amount + " " + test.register.ElementAt(2).name);
+            Console.ReadLine();
+
+            //Can Test
+            test.inventory.ForEach(Console.WriteLine);
+            Console.ReadLine();
+            Console.WriteLine(test.inventory.ElementAt(2).Cost + " " + test.inventory.ElementAt(2).name);
+            Console.ReadLine();
+
         }
     }
 }
