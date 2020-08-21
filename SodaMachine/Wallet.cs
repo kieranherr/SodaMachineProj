@@ -31,6 +31,14 @@ namespace SodaMachine
                 coins.Add(penny);
             }
         }
-        public Coin 
+        public List<Coin> SelectedCoins()
+        {
+            List<Coin> select = new List<Coin>();
+            Quarter quarter = new Quarter();
+            select.Add(quarter);
+            Dime dime = new Dime();
+            select.Add(dime);
+            return select;
+        }
     }
 }

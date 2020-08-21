@@ -10,9 +10,10 @@
             backpack = new Backpack();
         }
 
-        public void InsertMoney()
+        public double InsertMoney()
         {
-
+            double money = .35;
+            return money;
         }
     }
 }

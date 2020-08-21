@@ -8,6 +8,7 @@ namespace SodaMachine
         static void Main(string[] args)
         {
             SodaMachine test = new SodaMachine();
+            Simulation sim = new Simulation();
             //Coin test
             test.register.ForEach(Console.WriteLine);
             Console.ReadLine();
@@ -18,6 +19,11 @@ namespace SodaMachine
             test.inventory.ForEach(Console.WriteLine);
             Console.ReadLine();
             Console.WriteLine(test.inventory.ElementAt(2).Cost + " " + test.inventory.ElementAt(2).name);
+            Console.ReadLine();
+
+            //Dispense Test
+            Can coke = new Cola();
+            sim.CheckMoney(coke, sim.customer.wallet.SelectedCoins(), sim.customer.InsertMoney());
             Console.ReadLine();
 
         }
