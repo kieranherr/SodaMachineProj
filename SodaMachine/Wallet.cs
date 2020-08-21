@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Runtime.Remoting.Messaging;
 
 namespace SodaMachine
 {
@@ -9,7 +10,7 @@ namespace SodaMachine
         public Wallet()
         {
             coins = new List<Coin>();
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 12; i++)
             {
                 Quarter quarter = new Quarter();
                 coins.Add(quarter);
@@ -19,7 +20,7 @@ namespace SodaMachine
                 Dime dime = new Dime();
                 coins.Add(dime);
             }
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Nickle nickle = new Nickle();
                 coins.Add(nickle);
@@ -30,5 +31,6 @@ namespace SodaMachine
                 coins.Add(penny);
             }
         }
+        public Coin 
     }
 }

@@ -2,16 +2,17 @@
 
 namespace SodaMachine
 {
-    class SodaMachine
+    public class SodaMachine
     {
         public List<Coin> register;
         public List<Can> inventory;
-
+        public List<Coin> temporaryRegister;
 
         public SodaMachine()
         {
             register = new List<Coin>();
             inventory = new List<Can>();
+            temporaryRegister = new List<Coin>();
             for (int i = 0; i < 20; i++)
             {
                 Quarter quarter = new Quarter();
@@ -41,6 +42,15 @@ namespace SodaMachine
                 inventory.Add(rootBeer);
                 inventory.Add(orangeSoda);
             }
+        }
+        public double RunningTotal()
+        {
+            double total = 0;
+            foreach (Coin coin in temporaryRegister)
+            {
+                total += coin.Amount;
+            }
+            return total;
         }
     }
 }
